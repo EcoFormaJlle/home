@@ -14,7 +14,7 @@ O site está hospedado via GitHub Pages.
 |-- style.css (Folha de estilos principal)
 |
 |-- assets/
-|   |-- logo.svg (Logo vetorial da marca)
+|   |-- logo.png (Logo vetorial da marca)
 |   |-- hero-bg.jpg (Imagem de fundo para a home - *Você deve adicionar uma*)
 |   |-- projetos/
 |       |-- projeto-exemplo-thumb.jpg (*Adicione thumbnails aqui*)
