@@ -1,0 +1,298 @@
+/* Importa uma fonte "clean" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Variáveis de Cor */
+:root {
+  --verde-eco: #2E7D32;
+  --cinza-escuro: #333333;
+  --cinza-claro: #f4f4f4;
+  --branco: #ffffff;
+}
+
+/* Reset Básico e Padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: var(--cinza-escuro);
+  background-color: var(--branco);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--verde-eco);
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- Navegação --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--cinza-claro);
+}
+
+.navbar .logo img {
+  height: 40px; /* Ajuste a altura do logo */
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 2rem;
+}
+
+.navbar .nav-links a {
+  color: var(--cinza-escuro);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+  color: var(--verde-eco);
+}
+
+/* --- Hero Section (Página Inicial) --- */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/hero-bg.jpg') no-repeat center center/cover;
+  /* IMPORTANTE: Adicione uma imagem 'hero-bg.jpg' na pasta 'assets' */
+  color: var(--branco);
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background: var(--verde-eco);
+  color: var(--branco);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #256628; /* Verde mais escuro no hover */
+}
+
+/* --- Seção Sobre (Resumo na Home) --- */
+.page-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-section.bg-light {
+  background-color: var(--cinza-claro);
+}
+
+/* --- Grid de Projetos (projetos.html) --- */
+.projeto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.projeto-card {
+  background: var(--branco);
+  border: 1px solid var(--cinza-claro);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.projeto-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.projeto-card-content {
+  padding: 1.5rem;
+}
+
+.projeto-card-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* --- Página de Projeto Individual (Template) --- */
+.projeto-header {
+  text-align: center;
+  padding: 3rem 0;
+  background: var(--cinza-claro);
+}
+
+.projeto-imagem-principal {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+
+.projeto-conteudo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.projeto-descricao {
+  text-align: left;
+}
+
+.projeto-detalhes {
+  background: var(--cinza-claro);
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.projeto-detalhes h3 {
+  border-bottom: 2px solid var(--verde-eco);
+  padding-bottom: 0.5rem;
+}
+
+.projeto-galeria {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.voltar-link {
+  display: inline-block;
+  margin-top: 3rem;
+  font-size: 1rem;
+}
+
+/* --- Página de Contato --- */
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.submit-button {
+  background: var(--verde-eco);
+  color: var(--branco);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background: #256628;
+}
+
+/* --- Footer --- */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  background: var(--cinza-escuro);
+  color: var(--cinza-claro);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar .nav-links {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  .navbar .nav-links li {
+    margin: 0 0.75rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .projeto-conteudo,
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projeto-galeria {
+    grid-template-columns: 1fr;
+  }
+}
